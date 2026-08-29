@@ -15,10 +15,10 @@
 
 ## Cómo instalarlo
 
-Reemplaza tu `styles.css` y tu `script.js` por estos dos — `index.html`,
+Reemplazando `styles.css` y `script.js` por: — `index.html`,
 `images/` y `cv/` no cambiaron.
 
-## Para actualizar tu sitio publicado
+## Actualización
 
 ```
 git add .
