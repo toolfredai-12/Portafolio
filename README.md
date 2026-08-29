@@ -1,34 +1,34 @@
 # Portafolio — Alfredo Vargas Vázquez
 
-Versión consolidada y verificada, lista para desplegar.
+## Qué se agregó en esta pasada (feedback de pruebas en celular)
 
-## Qué se corrigió en esta pasada
+1. **Navbar en móvil**: el nombre ocupa su propia fila completa; navegación + ES/EN
+   comparten la fila de abajo. Se ajustó el padding del héroe para que no quede
+   tapado por el encabezado, ahora más alto en pantallas chicas.
+2. **Modal ampliado (lightbox)**: en pantallas ≤700px las flechas se ocultan y en
+   su lugar: avance automático cada 3.5s + deslizar con el dedo para navegar
+   manualmente (como los estados de WhatsApp). Deslizar reinicia el temporizador.
+3. **Carruseles de proyectos**: en pantallas ≤700px las flechas se ocultan; se
+   navega deslizando el dedo sobre la foto (sin avance automático — el ritmo
+   lo controlas tú).
+4. **"Cómo trabajo"**: ahora se puede arrastrar con el dedo. Al soltar, la tira
+   sigue moviéndose por inercia y frena poco a poco hasta detenerse en la
+   palabra más cercana — como una ruleta, no como un salto directo.
 
-- **Bug de fondo**: 4 bloques de proyecto (Gym Access, Trans-Matic, PlantApp, SCARA)
-  tenían 2 `</div>` de más cada uno — un error que arrastraba yo mismo desde el script
-  que usé para rediseñar los carruseles hace varios turnos. Rompía el anidado del HTML
-  y hacía que las tarjetas se "escaparan" de su contenedor a partir de Gym Access.
-  Ya está corregido y verificado: 112 aperturas = 112 cierres de `<div>` en todo el archivo.
-- Botón de cerrar del modal (duplicado accidental).
-- Crossfade dentro del modal ampliado.
-- Fondo de "Cómo trabajo" de vuelta a pergamino.
-- Destello azul al cambiar de foto en el modal (color propio para el modal, separado
-  de las tarjetas de la página).
-- Tarjeta de Perfil con esquinas redondeadas, viñeta y animación al hacer scroll.
+Todo lo anterior es exclusivo de gestos táctiles (touch) — el mouse y las
+flechas en escritorio siguen funcionando exactamente igual que antes.
 
-## Estructura
+## Cómo instalarlo
+
+Reemplaza tu `styles.css` y tu `script.js` por estos dos. `index.html`,
+`images/` y `cv/` no cambiaron — no hace falta tocarlos.
+
+## Para actualizar tu sitio ya publicado
 
 ```
-index.html
-styles.css
-script.js
-images/     (17 archivos)
-cv/         (tu CV en PDF)
+git add .
+git commit -m "Mejoras de experiencia móvil: navbar, swipe y carrusel con inercia"
+git push
 ```
 
-## Siguiente paso: desplegar con git
-
-Cuando confirmes que todo se ve bien con Live Server, avísame y seguimos con:
-1. Inicializar el repositorio (`git init`)
-2. Subirlo a GitHub
-3. Activar GitHub Pages para que quede público
+GitHub Pages se actualiza solo, en 1-2 minutos.
